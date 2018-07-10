@@ -20,6 +20,11 @@ public class Demo {
 
 
 
+class Compressorwinkel{
+	
+}
+
+
 interface Opblaasbaar{
 	void opblazen();
 }
