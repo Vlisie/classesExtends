@@ -9,8 +9,30 @@ public class Demo {
 		Vrachtschip vrachtschip2 = new Containerschip();
 		Containerschip vrachtschip3 = new Containerschip();
 		System.out.println(vrachtschip3.aantalContainers);
-	//	vrachtschip1.verschepen;
+	//	vrachtschip1.verschepe
+		Schipper ahab = new Schipper();
+		ahab.besturen(vrachtschip1);
 		System.out.println();	
+	}
+}
+
+
+
+
+
+interface Opblaasbaar{
+	void opblazen();
+}
+class Luchtbed implements Opblaasbaar{
+	public void opblazen() {
+	
+	}
+}
+class Roeiboot extends Schip implements Opblaasbaar{
+	public void opblazen() {	
+	}
+	void varen() {
+	
 	}
 }
 abstract class Schip{
@@ -49,5 +71,10 @@ class Sleephopperzuiger extends Vrachtschip{
 	int kuubsZandpm = 100;
 	void verschepen() {
 		System.out.println("zand zuigen en dumpen");
+	}
+}
+class Schipper{
+	void besturen(Schip schip) {
+		schip.varen();
 	}
 }
